@@ -50,6 +50,7 @@ import linkedinLogo from './assets/social/linkedin.png'
 import githubLogo from './assets/social/github.png'
 import instagramLogo from './assets/social/instagram.png'
 
+
 const projects = [
   {
     title: 'Development of Drg. Nancy Hutabarat clinic website',
@@ -457,20 +458,30 @@ useEffect(() => {
 
 <section id="projects" className="panel">
   <div className="section-header section-header--centered">
-<h2 className="projects-title">Projects</h2>
+    <h2 className="projects-title">Projects</h2>
   </div>
-  <div className="projects-grid">
-    {projects.map((project) => (
-      <article key={project.title} className="project-card">
 
+  <div className="projects-grid">
+    {projects.map((project, index) => (
+      <article
+        key={`${project.title}-${index}`}
+        className="project-card"
+      >
         <div className="project-content">
           <h3>{project.title}</h3>
 
+          {/* IMAGE WRAPPER — DISAMAKAN DENGAN CERTIFICATE */}
           <div className="project-image">
-            <img 
-              src={project.image} 
-              alt={project.title}
-            />
+            <div className="project-image-wrapper">
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.src = '/image-fallback.png'
+                }}
+              />
+            </div>
           </div>
 
           <p>{project.description}</p>
@@ -482,11 +493,14 @@ useEffect(() => {
           ))}
         </div>
 
-        {/* BUTTON DI BAGIAN PALING BAWAH */}
-        <a href={project.link} className="project-button">
+        <a
+          href={project.link}
+          className="project-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Lihat Proyek →
         </a>
-
       </article>
     ))}
   </div>

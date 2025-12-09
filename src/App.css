@@ -23,9 +23,9 @@
 
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
+  z-index: 1200;
   padding: 22px 50px; /* lebih tebal & premium */
   display: flex;
   justify-content: space-between;

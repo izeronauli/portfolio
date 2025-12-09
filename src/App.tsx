@@ -50,15 +50,12 @@ import linkedinLogo from './assets/social/linkedin.png'
 import githubLogo from './assets/social/github.png'
 import instagramLogo from './assets/social/instagram.png'
 
-
-
-
 const projects = [
   {
     title: 'Development of Drg. Nancy Hutabarat clinic website',
     description:
       'Developing a website for Drg. Nancy Hutabarat Clinic as a central platform for information and dental service appointments, equipped with service management, gallery, staff data, facilities, schedule, testimonials, and appointment booking features.',
-    image: proj1,
+    image: './assets/projects/proj1.png',
     stack: ['Laravel', 'JavaScript', 'PHP', 'Boostrap', 'MySQL'],
     link: 'https://github.com/izeronauli/FinalProject-I_Web-based-Drg-Nancy-Hutabarat-Clinic'
   },

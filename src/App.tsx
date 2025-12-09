@@ -36,12 +36,6 @@ import postgresqlLogo from './assets/skills/postgresql.png'
 import flutterlogo from './assets/skills/flutter.svg'
 import dartLogo from './assets/skills/dart.jpeg'
 
-import proj1 from './assets/projects/proj1.png'
-import proj2 from './assets/projects/proj2.png'
-import proj3 from './assets/projects/proj3.png'
-import proj4 from './assets/projects/proj4.png'
-import proj5 from './assets/projects/proj5.png'
-
 import itdelLogo from './assets/itdel.png'
 import parmaksianLogo from'./assets/parmaksian.jpeg'
 
@@ -56,43 +50,44 @@ const projects = [
     title: 'Development of Drg. Nancy Hutabarat clinic website',
     description:
       'Developing a website for Drg. Nancy Hutabarat Clinic as a central platform for information and dental service appointments, equipped with service management, gallery, staff data, facilities, schedule, testimonials, and appointment booking features.',
-    image: proj1,
-    stack: ['Laravel', 'JavaScript', 'PHP', 'Boostrap', 'MySQL'],
+    image: '/projects/proj1.png',
+    stack: ['Laravel', 'JavaScript', 'PHP', 'Bootstrap', 'MySQL'],
     link: 'https://github.com/izeronauli/FinalProject-I_Web-based-Drg-Nancy-Hutabarat-Clinic'
   },
   {
     title: 'Design and Development of Movie Catalog Application',
     description:
       'The Movie Catalog Application is designed and developed to provide a complete movie exploration experience, including user authentication, browsing various movie categories, searching specific titles, and viewing detailed information and trailers. The application also includes a favorites feature, smooth page navigation, and a dynamic, responsive user interface. All features are built using TMDb API integration, Firebase Authentication, and multiple providers for efficient movie data management.',
-    image: proj2,
-    stack: ['Flutter','Dart', 'TMDb API', 'Firebase'],
+    image: '/projects/proj2.png',
+    stack: ['Flutter', 'Dart', 'TMDb API', 'Firebase'],
     link: 'https://github.com/Roy-oy/project_aplikasi_mobile'
   },
   {
     title: 'Development of Kawalptnku Information System',
     description:
       'The Kawalptnku Information System is a web platform that helps prospective students prepare for PTN admission through account management, tryout features, score-based admission simulation, university and study program information, integrated payments use Midtrans, announcements, and interest visualization.',
-    image: proj3,
-    stack: ['React','Fiber','Golang', 'MySQL','Postman', 'Katalon'],
+    image: '/projects/proj3.png',
+    stack: ['React', 'Golang', 'MySQL'],
     link: 'https://github.com/jmsrzk14/PA2-Kel08'
   },
-    {
-    title: 'Classification of Glioma Brain Tumors Using MLP and Random Forest Algorithms ',
+  {
+    title: 'Classification of Glioma Brain Tumors',
     description:
-      'The Kawalptnku Information System is a web platform that helps prospective students prepare for PTN admission through account management, tryout features, score-based admission simulation, university and study program information, integrated payments use Midtrans, announcements, and interest visualization.',
-    image: proj4,
-    stack: ['ReactJs','Python','Vite','Flask','Random Forest','Multilayer Perceptron',],
+      'A machine learning system designed to classify glioma brain tumors from medical data using MLP and Random Forest.',
+    image: '/projects/proj4.png',
+    stack: ['React', 'Python', 'Flask'],
     link: 'https://github.com/Danielhzg/GliomaNet'
   },
   {
-    title: 'YOLOv11 Implementation for Mobile-Based Detection of Organic and Inorganic Waste Objects',
+    title: 'YOLOv11 Waste Detection',
     description:
-      'The Kawalptnku Information System is a web platform that helps prospective students prepare for PTN admission through account management, tryout features, score-based admission simulation, university and study program information, integrated payments use Midtrans, announcements, and interest visualization.',
-    image: proj5,
-    stack: ['Flutter','Python','YOLOv11','MobileNetV3','MobileNetV4','TensorFlow Lite'],
+      'Mobile-based application for real-time waste detection using YOLOv11 and TensorFlow Lite.',
+    image: '/projects/proj5.png',
+    stack: ['Flutter', 'Python', 'YOLO'],
     link: 'https://github.com/Danielhzg/Smartwaste_Application'
   }
-]
+];
+
 
 const education = [
   {
@@ -473,15 +468,12 @@ useEffect(() => {
           {/* IMAGE WRAPPER — DISAMAKAN DENGAN CERTIFICATE */}
           <div className="project-image">
             <div className="project-image-wrapper">
-              <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                onError={(e) => {
-                  e.currentTarget.src = '/image-fallback.png'
-                }}
-              />
-            </div>
+    <img
+      src={project.image}
+      alt={project.title}
+      loading="lazy"
+    />
+  </div>
           </div>
 
           <p>{project.description}</p>

@@ -85,6 +85,14 @@ const projects = [
     image: '/projects/proj5.png',
     stack: ['Flutter', 'Python', 'YOLO'],
     link: 'https://github.com/Danielhzg/Smartwaste_Application'
+  },
+    {
+    title: 'Re-Design Website Rumah Kreatif Toba',
+    description:
+      'The redesigned Rumah Kreatif Toba website features a modern UMKM platform with a clean card-based layout. Pages are simplified (Home, Catalog, UMKM Profile, Transactions, User Profile, Education, Help) with a streamlined shopping flow, integrated payments, order notifications, and features like wishlist, reviews, and seller chat for a convenient and trustworthy user experience.',
+    image: '/projects/proj6.png',
+    stack: ['Figma', 'System Usability Scale', 'Heuristic Evaluation'],
+    link: 'https://www.figma.com/design/wQRBCyOWXvjTIGUah05zJX/Proyek-DPP?node-id=0-1&t=D3w1vsH5S5Y9samz-1'
   }
 ];
 

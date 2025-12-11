@@ -308,6 +308,7 @@ useEffect(() => {
   <div className="nav-links">
     <a className={activeSection === "home" ? "active" : ""} href="#home">Home</a>
     <a className={activeSection === "about" ? "active" : ""} href="#about">About</a>
+    <a className={activeSection === "education" ? "active" : ""} href="#education">Education</a>
     <a className={activeSection === "projects" ? "active" : ""} href="#projects">Projects</a>
     <a className={activeSection === "skills" ? "active" : ""} href="#skills">Skills</a>
     <a className={activeSection === "certificates" ? "active" : ""} href="#certificates">Certificates</a>
@@ -349,7 +350,7 @@ useEffect(() => {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <span className="icon-circle"><span className="icon-symbol">↓</span></span>
+  <span className="icon-circle"><span className="icon-symbol"></span></span>
   Download CV
 </a>
 
@@ -362,14 +363,6 @@ useEffect(() => {
     Hire Me
   </a>
 </div>
-
-      <div className="hero-card">
-        <p>Excited to collaborate on innovative digital projects.</p>
-        <div className="availability">
-          <span className="dot" />
-          <span>Open for new opportunities</span>
-        </div>
-      </div>
     </div>
   </header>
 </main>

@@ -35,6 +35,23 @@ import sqlyogLogo from './assets/skills/SQLyog.jpg'
 import postgresqlLogo from './assets/skills/postgresql.png'
 import flutterlogo from './assets/skills/flutter.svg'
 import dartLogo from './assets/skills/dart.jpeg'
+import phpLogo from './assets/skills/php.svg'
+import javaLogo from './assets/skills/java.svg'
+import cLogo from './assets/skills/c.png'
+import canvaLogo from './assets/skills/canva.jpeg'
+import viteLogo from './assets/skills/vite.svg'
+import starumlLogo from './assets/skills/staruml.png'
+import bizagiLogo from './assets/skills/bizagi.jpg'
+import drawioLogo from './assets/skills/drawio.png'
+import postmanLogo from './assets/skills/postman.png'
+import netbeansLogo from './assets/skills/netbeans.png'
+import vscodeLogo from './assets/skills/vscode.png'
+import androidLogo from './assets/skills/android.png'
+import eclipseLogo from './assets/skills/eclipse.png'
+import xamppLogo from './assets/skills/xampp.png'
+import golangLogo from './assets/skills/golang.svg'
+import mongodbLogo from './assets/skills/mongodb.svg'
+
 
 import itdelLogo from './assets/itdel.png'
 import parmaksianLogo from'./assets/parmaksian.jpeg'
@@ -51,7 +68,7 @@ const projects = [
     description:
       'Developing a website for Drg. Nancy Hutabarat Clinic as a central platform for information and dental service appointments, equipped with service management, gallery, staff data, facilities, schedule, testimonials, and appointment booking features.',
     image: '/projects/proj1.png',
-    stack: ['Laravel', 'JavaScript', 'PHP', 'Bootstrap', 'MySQL'],
+    stack: ['Laravel', 'JavaScript', 'PHP', 'Bootstrap', 'MySQL', 'Bootstrap'],
     link: 'https://github.com/izeronauli/FinalProject-I_Web-based-Drg-Nancy-Hutabarat-Clinic'
   },
   {
@@ -67,23 +84,23 @@ const projects = [
     description:
       'The Kawalptnku Information System is a web platform that helps prospective students prepare for PTN admission through account management, tryout features, score-based admission simulation, university and study program information, integrated payments use Midtrans, announcements, and interest visualization.',
     image: '/projects/proj3.png',
-    stack: ['React', 'Golang', 'MySQL'],
+    stack: ['React', 'Fiber', 'Tailwind','Golang', 'MySQL','Midtrans'],
     link: 'https://github.com/jmsrzk14/PA2-Kel08'
   },
   {
-    title: 'Classification of Glioma Brain Tumors',
+    title: 'Classification of Glioma Brain Tumors Using MLP and Random Forest Algorithms',
     description:
-      'A machine learning system designed to classify glioma brain tumors from medical data using MLP and Random Forest.',
+      'This project builds a glioma brain tumor classification model (LGG vs GBM) based on clinical data and genetic mutations using Random Forest and MLP algorithms in an ensemble scheme. The system includes data preprocessing, model training, and evaluation with metrics such as F1-score and ROC-AUC. It is then deployed to a web application (GliomaNet) so that users can input patient features and immediately obtain glioma class predictions and probabilities.',
     image: '/projects/proj4.png',
-    stack: ['React', 'Python', 'Flask'],
+    stack: ['React', 'Python', 'Flask', 'Vite','Random Forest', 'MLP'],
     link: 'https://github.com/Danielhzg/GliomaNet'
   },
   {
-    title: 'YOLOv11 Waste Detection',
+    title: 'YOLOv11 Implementation for Mobile-Based Detection of Organic and Inorganic Waste Objects',
     description:
-      'Mobile-based application for real-time waste detection using YOLOv11 and TensorFlow Lite.',
+      'A mobile waste detection system was built using a customized YOLOv11 model to classify organic and inorganic waste in real time on Android. The project used a 1,514‑image dataset with annotation and augmentation, and explored YOLOv11 variants with MobileNetV3/V4 backbones, FPN–PAN neck, and partial freeze to balance accuracy and speed. The best model, with high mAP, precision, and recall, was deployed in a Flutter app that shows bounding boxes, class labels, and confidence scores for multiple waste objects per image.',
     image: '/projects/proj5.png',
-    stack: ['Flutter', 'Python', 'YOLO'],
+    stack: ['Flutter', 'Python', 'YOLOv11', 'TensorFlow Lite', 'MobileNetV3', 'MobileNetV4'],
     link: 'https://github.com/Danielhzg/Smartwaste_Application'
   },
     {
@@ -142,44 +159,66 @@ const skillGroup: SkillGroup[] = [
       { name: 'Laravel', icon: laravelLogo },
       { name: 'react', icon: reactLogo },
       { name: 'Flutter', icon: flutterlogo },
+      { name: 'Vite', icon: viteLogo },
       { name: 'JavaScript', icon: jsLogo },
       { name: 'Dart', icon: dartLogo },
+      {name: 'PHP', icon: phpLogo },
+      {name: 'Golang', icon: golangLogo },
+      {name: 'Java', icon: javaLogo },
+      {name: 'C', icon: cLogo },
       { name: 'Python', icon: pyLogo },
-      { name: 'HTML5', icon: htmlLogo },
+      { name: 'HTML', icon: htmlLogo },
       { name: 'CSS', icon: cssLogo }
     ]
   },
   {
-    title: 'Quality Assurance',
+    title: 'Testing Tools',
     items: [
       { name: 'Katalon', icon: katalonLogo },
       { name: 'Selenium', icon: seleniumLogo },
       { name: 'JUnit', icon: junitLogo },
       { name: 'Cypress', icon: cypressLogo },
-      { name: 'TestRail', icon: testrailLogo }
+      { name: 'TestRail', icon: testrailLogo },
+      { name: 'Postman', icon: postmanLogo }
     ]
   },
   {
     title: 'Databases',
     items: [
-      { name: 'MySQL Workbench', icon: MySQLLogo },
+      { name: 'Workbench', icon: MySQLLogo },
       { name: 'SQLyog ', icon: sqlyogLogo },
-      { name: 'PostgreSQL', icon: postgresqlLogo }
+      { name: 'PostgreSQL', icon: postgresqlLogo },
+      {name: 'MongoDB', icon: mongodbLogo }
     ]
   },
   {
-    title: 'User Interface',
+    title: 'Design Tools',
     items: [
       { name: 'Figma', icon: figmaLogo },
       { name: 'Balsamiq', icon: BalsamiqLogo },
+      { name: 'Canva', icon: canvaLogo },
+      { name: 'StarUML', icon: starumlLogo },
+      { name: 'Bizagi', icon: bizagiLogo },
+      { name: 'Draw.io', icon: drawioLogo }
     ]
   },
    {
     title: 'Data Analyst',
     items: [
       { name: 'Microsoft Excel', icon: excelLogo },
-      { name: 'Power BI', icon: powerbiLogo },
+      { name: 'PowerBI', icon: powerbiLogo },
       { name: 'Looker Studio', icon: lookerLogo }
+    ]
+  },
+  {
+    title: 'Tools Development',
+    items: [
+      { name: 'Github', icon: githubLogo },
+      { name: 'Netbeans', icon: netbeansLogo },
+      { name: 'VsCode', icon: vscodeLogo },
+      { name: 'Android Studio', icon: androidLogo },
+      { name: 'Eclipse', icon: eclipseLogo },
+      { name: 'XAMPP', icon: xamppLogo }
     ]
   }
 ]
@@ -252,14 +291,14 @@ const certificates = [
     title: 'Software Engineering 101: Plan and Execute Better Software.',
     issuer: 'Udemy',
     period: 'December 2025',
-    focus: 'Techniques for effective test automation, including Web UI testing fundamentals, API testing, data-driven testing, test object management, BDD workflow, test suite optimization, CI/CD integration, and Git version control using Katalon Studio.',
+    focus: 'Techniques for effective software development, including software engineering principles, requirements definition, software architecture planning, modularity, computer science models, and Agile methodology.',
     image: seudemyImage
   }, 
   {
     title: 'Bootcamp QA Automation Katalon Batch #2.',
     issuer: 'Afteroffice',
     period: 'November 2025',
-    focus: 'Techniques for effective software development, including software engineering principles, requirements definition, software architecture planning, modularity, computer science models, and Agile methodology..',
+    focus: 'Techniques for effective test automation, including Web UI testing fundamentals, API testing, data-driven testing, test object management, BDD workflow, test suite optimization, CI/CD integration, and Git version control using Katalon Studio',
     image: katalonImage
   }
 ];
@@ -277,7 +316,7 @@ const [activeSection, setActiveSection] = useState("home");
 
 useEffect(() => {
   const handleScroll = () => {
-    const sections = ["home", "about", "projects", "skills", "certificates", "contact"];
+    const sections = ["home", "about", "education",  "projects", "skills", "certificates", "contact"];
 
     let current = "home";
 
@@ -492,7 +531,7 @@ useEffect(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Lihat Proyek →
+          Lihat Proyek
         </a>
       </article>
     ))}

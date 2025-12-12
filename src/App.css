@@ -22,27 +22,28 @@
 }
 
 
+/* NAVBAR SLIM PREMIUM */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1200;
-  padding: 22px 50px; /* lebih tebal & premium */
+
+  padding: 8px 28px;               /* ⬅️ SUPER SLIM */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: rgba(15, 15, 15, 0.55);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 10, 0.42);  /* lebih tipis dan smooth */
+  backdrop-filter: blur(12px);
 
-  z-index: 1200;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* LOGO */
 .logo {
-  font-size: 2rem;        /* lebih BESAR */
+  font-size: 1.35rem;    /* kecil tapi elegan */
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.8px;
   color: #ffffff;
 }
 
@@ -52,65 +53,67 @@
   background-clip: text;
   color: transparent;
   font-weight: 900;
-  text-shadow: 0 0 14px rgba(0, 200, 255, 0.6);
 }
 
 /* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 38px; /* jarak lebih lega */
+  gap: 20px;           /* jarak lebih kecil */
 }
 
 .nav-links a {
   position: relative;
   text-decoration: none;
 
-  font-size: 1.15rem;  /* ukuran tulisan lebih besar */
+  font-size: 0.95rem;  /* lebih kecil */
   font-weight: 600;
 
-  color: #dddddd;
-  transition: 0.26s ease-in-out;
+  color: #e5e5e5;
+  padding: 6px 0;      /* membuat area klik lebih tipis */
+  transition: 0.25s ease;
 }
 
-/* Hover */
+/* Hover effect */
 .nav-links a:hover {
   color: #3bc9ff;
-  transform: translateY(10px);
+  transform: translateY(2px);  /* kecil, elegan */
 }
 
-/* Underline glow */
+/* Underline */
 .nav-links a::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
   left: 0;
-  height: 3px;       /* lebih tebal */
+  height: 2px;
   width: 0%;
   background: linear-gradient(90deg, #3bc9ff, #6e9dff, #b889ff);
-  border-radius: 8px;
-  transition: width 0.3s;
+  border-radius: 6px;
+  transition: width 0.25s ease;
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* active link */
+/* Active */
 .nav-links a.active {
   color: #3bc9ff;
-  text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
 }
 
 .nav-links a.active::after {
   width: 100%;
 }
 
+#education {
+  scroll-margin-top: 120px;
+}
+
+
+ 
 /* ====================== */
 /*     FULLSCREEN HERO    */
 /* ====================== */
-/* ===================================== */
-/*              HERO WRAPPER             */
-/* ===================================== */
 
 .hero {
   display: flex;
@@ -818,6 +821,18 @@
 .card-float:nth-child(3) { animation-delay: .8s; }
 
 
+/* --- ANIMASI SCROLL UNTUK ABOUT --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
   /* Education Section Title */
 /* MAIN TITLE “EDUCATION” – sama persis seperti Skills */
@@ -1009,6 +1024,27 @@
     line-height: 1.5;
     margin: 0;
 }
+
+nav a.active {
+  color: #60a5fa !important;      /* warna biru glow */
+  font-weight: 700;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+}
+
+
 
 /*Project*/
 #projects .section-header h2 {
@@ -1597,6 +1633,29 @@
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   margin-top: 1.5rem;
 }
+
+.show-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.show-more-btn {
+  padding: 10px 22px;
+  background: #4d57fe;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background: #343cff;
+  transform: translateY(-2px);
+}
+
+
 /* CONTACT SECTION */
 .contact {
   padding: 80px 20px;

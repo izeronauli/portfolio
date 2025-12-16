@@ -51,6 +51,8 @@ import eclipseLogo from './assets/skills/eclipse.png'
 import xamppLogo from './assets/skills/xampp.png'
 import golangLogo from './assets/skills/golang.svg'
 import mongodbLogo from './assets/skills/mongodb.svg'
+import enterprisLogo from './assets/skills/enterprise.png'
+import erdLogo from './assets/skills/erd.png'
 
 
 import itdelLogo from './assets/itdel.png'
@@ -199,7 +201,9 @@ const skillGroup: SkillGroup[] = [
       { name: 'Canva', icon: canvaLogo },
       { name: 'StarUML', icon: starumlLogo },
       { name: 'Bizagi', icon: bizagiLogo },
-      { name: 'Draw.io', icon: drawioLogo }
+      { name: 'Draw.io', icon: drawioLogo },
+      { name: 'ERDPlus', icon: erdLogo },
+      { name: 'Enterprise Architect', icon: enterprisLogo }
     ]
   },
    {

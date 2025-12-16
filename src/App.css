@@ -834,110 +834,6 @@
 }
 
 
-  /* Education Section Title */
-/* MAIN TITLE “EDUCATION” – sama persis seperti Skills */
-
-#education .section-header h2 {
-  font-size: clamp(2.5rem, 4.5vw, 3.4rem); /* ukuran besar */
-  font-weight: 800;
-  text-align: center;
-  background: linear-gradient(90deg, #93c5fd, #c4b5fd); /* gradient sama seperti skills */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  position: relative;
-  margin-bottom: 1.5rem; /* jarak ke grid */
-}
-
-#education .section-header h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -12px;
-  width: 120px;
-  height: 4px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
-  box-shadow: 0 0 12px rgba(96,165,250,0.7);
-}
-
-
-  /* Garis bawah gradient seperti Skills */
-  .section-header h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 120px;
-    height: 4px;
-    border-radius: 2px;
-    background: linear-gradient(90deg, #60a5fa, #a78bfa);
-    box-shadow: 0 0 12px rgba(96,165,250,0.7);
-  }
-
-
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .timeline-card {
-    display: grid;
-    grid-template-columns: minmax(150px, 1fr) 3fr;
-    gap: 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 1.25rem;
-    padding: 1.5rem;
-    background-color: rgba(15, 23, 42, 0.98);
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-  }
-
-  .timeline-card:hover {
-    border-color: rgba(96,165,250,0.2);
-    background-color: rgba(15, 23, 42, 1);
-  }
-
-  .timeline-meta {
-    color: var(--muted);
-  }
-
-  .institution-logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0.75rem 0 0.35rem;
-  }
-
-  .institution-logo img {
-    width: 80px;
-    height: auto;
-    max-height: 70px;
-    object-fit: contain;
-    display: block;
-  }
-
-  .timeline-meta .period {
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 0.9rem;
-  }
-
-  .timeline-card h3 {
-    font-size: 1.3rem;
-    margin: 0 0 0.75rem 0;
-    font-weight: 700;
-  }
-
-  .timeline-card ul {
-    margin: 0.75rem 0 0;
-    padding-left: 1.25rem;
-    color: var(--muted);
-  }
-
   .about-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1042,6 +938,181 @@ nav a.active::after {
   border-radius: 2px;
   background: linear-gradient(90deg, #60a5fa, #a78bfa);
   box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+}
+
+
+
+  /* Education Section Title */
+#education .section-header h2 {
+  font-size: clamp(2.5rem, 4.5vw, 3.4rem); /* ukuran besar */
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #93c5fd, #c4b5fd); /* gradient sama seperti skills */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  margin-bottom: 1.5rem; /* jarak ke grid */
+}
+
+#education .section-header h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  box-shadow: 0 0 12px rgba(96,165,250,0.7);
+}
+
+
+  .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.timeline-card {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) 1fr;
+  gap: 2rem;
+  padding: 1.8rem;
+  border-radius: 1.5rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(15, 23, 42, 0.85)
+  );
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  backdrop-filter: blur(14px);
+
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(96, 165, 250, 0.15);
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.institution-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.institution-logo img {
+  width: 72px;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.timeline-meta .period {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  color: #93c5fd;
+  background: rgba(96, 165, 250, 0.12);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.timeline-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+  color: #e5e7eb;
+}
+
+.timeline-card .company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.timeline-card ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+.timeline-card ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .timeline-card {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .institution-logo {
+    justify-content: flex-start;
+    width: fit-content;
+  }
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 90px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(96,165,250,0.4),
+    transparent
+  );
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    display: none;
+  }
 }
 
 

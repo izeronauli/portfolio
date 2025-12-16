@@ -308,11 +308,16 @@ const certificates = [
 ];
 
 const socials = [
-  { label: 'Email', url: 'mailto:izeronaulisitorus@gmail.com', Logo: socialLogo },
+  {
+    label: 'Email',
+    url: 'https://mail.google.com/mail/?view=cm&fs=1&to=izeronaulisitorus@gmail.com',
+    Logo: socialLogo
+  },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ize-ronauli-sitorus/', Logo: linkedinLogo },
   { label: 'GitHub', url: 'https://github.com/izeronauli', Logo: githubLogo },
   { label: 'Instagram', url: 'https://www.instagram.com/ronauliii_s', Logo: instagramLogo },
 ];
+
 
 function App() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -623,22 +628,27 @@ useEffect(() => {
 
 
 
-      <footer>
-        <p>© {new Date().getFullYear()} Ize Ronauli Sitorus •</p>
-      </footer>
+<footer id="footer">
+  <div className="footer-container">
+    <p className="footer-text">
+      Designed & Built by <span>Ize Ronauli Sitorus</span>
+    </p>
+  </div>
+</footer>
 
-      {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedImage(null)}>
-              ✕
-            </button>
-            <img src={selectedImage} alt="Certificate Preview" />
-          </div>
-        </div>
-      )}
+{selectedImage && (
+  <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <button className="modal-close" onClick={() => setSelectedImage(null)}>
+        ✕
+      </button>
+      <img src={selectedImage} alt="Certificate Preview" />
+    </div>
+  </div>
+)}
     </div>
   )
 }
+
 
 export default App
